@@ -93,9 +93,7 @@
   .hero-tag {
     font-size: 13px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
     color: rgba(255,255,255,0.85); margin-bottom: 0.7rem;
-    display: flex; align-items: center; gap: 10px;
   }
-  .hero-tag::before { content: ''; display: block; width: 20px; height: 1px; background: rgba(255,255,255,0.7); }
   .hero-h1 {
     font-size: clamp(1.6rem, 3.5vw, 3rem); font-weight: 500;
     line-height: 1.2; color: #fff; margin-bottom: 1.8rem; letter-spacing: -0.01em;
@@ -116,8 +114,8 @@
   .stat-desc { font-size: 14px; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 8px; line-height: 1.6; }
 
   /* ── SECTIONS ── */
-  .section-tag { font-size: 13px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
-  .section-tag::before { content: ''; display: block; width: 20px; height: 1px; background: var(--muted); }
+  .section-tag { font-size: 13px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; }
+
   .section-h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.2; color: var(--text); margin-bottom: 1rem; letter-spacing: -0.01em; }
   .section-h2 strong { font-weight: 600; }
   .section-lead { font-size: 17px; font-weight: 300; color: var(--muted); line-height: 1.9; }
@@ -168,7 +166,6 @@
   /* ── TERRITORY ── */
   .territory-section { background: var(--gray); padding: 6rem 0; }
   .territory-section .section-tag { color: rgba(255,255,255,0.5); }
-  .territory-section .section-tag::before { background: rgba(255,255,255,0.4); }
   .territory-section .section-h2 { color: #fff; }
   .territory-section .section-lead { color: rgba(255,255,255,0.6); }
   .regions-list { margin-top: 2rem; border-top: 0.5px solid rgba(255,255,255,0.15); }
@@ -196,8 +193,8 @@
 
   /* ── CTA ── */
   .cta-section { background: var(--blue); padding: 6rem 0; }
-  .cta-tag { font-size: 13px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
-  .cta-tag::before { content: ''; display: block; width: 20px; height: 1px; background: rgba(255,255,255,0.4); }
+  .cta-tag { font-size: 13px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 1rem; }
+
   .cta-h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 300; color: #fff; line-height: 1.2; }
   .cta-h2 strong { font-weight: 600; }
   .cta-sub { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.65); margin-top: 0.8rem; }
@@ -278,7 +275,7 @@
           el territorio.
         </h1>
         <div class="d-flex align-items-center gap-4 flex-wrap">
-          <a href="#contacto" class="btn-primary-einas">Conversemos →</a>
+          <a href="#contacto" class="btn-primary-einas">Conversemos</a>
           <a href="#servicios" class="btn-ghost-einas">Ver servicios</a>
         </div>
       </div>
@@ -591,8 +588,8 @@
         </div>
       </div>
       <div class="col-lg-4 offset-lg-1">
-        <a href="mailto:contacto@einas.cl" class="btn-white">contacto@einas.cl →</a>
-        <a href="https://einas.cl/contacto/" class="btn-outline-white">Formulario de contacto →</a>
+        <a href="mailto:contacto@einas.cl" class="btn-white">contacto@einas.cl</a>
+        <a href="https://einas.cl/contacto/" class="btn-outline-white">Formulario de contacto</a>
       </div>
     </div>
   </div>
