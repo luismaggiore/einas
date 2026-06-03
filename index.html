@@ -176,12 +176,13 @@
   .map-wrap { display: flex; justify-content: center; align-items: center; }
 
   /* ── MEMBERSHIPS ── */
-  .memberships-section { padding: 2.5rem 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
-  .memb-label { font-size: 13px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .memberships-section { padding: 4rem 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; }
+  .memb-label { font-size: 13px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
   .memb-item { font-size: 16px; font-weight: 400; color: var(--muted); padding: 0.45rem 1.1rem; border: 0.5px solid var(--border); border-radius: 1px; display: inline-block; margin: 4px 4px; }
-  .memb-logo-item { display: inline-flex; align-items: center; padding: 0.45rem 1.1rem; border: 0.5px solid var(--border); border-radius: 1px; margin: 4px 4px; text-decoration: none; transition: opacity 0.2s; }
-  .memb-logo-item:hover { opacity: 0.7; }
-  .memb-logo-item img { height: 36px; width: auto; display: block; }
+  .memb-logos { display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .memb-logo-item { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; border: 1px solid var(--border); border-radius: 4px; text-decoration: none; transition: all 0.2s; background: #fff; }
+  .memb-logo-item:hover { opacity: 0.75; border-color: var(--primary); box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .memb-logo-item img { height: 52px; width: auto; display: block; }
 
   /* ── CLIENTS ── */
   .clients-section { padding: 6rem 0; }
@@ -520,7 +521,7 @@
 <div class="memberships-section fade-in">
   <div class="container">
     <p class="memb-label">Somos parte de</p>
-    <div>
+    <div class="memb-logos">
       <a class="memb-logo-item" href="https://h2chile.cl" target="_blank" rel="noopener" aria-label="H2 Chile">
         <img src="https://h2chile.cl/wp-content/uploads/2023/11/cropped-Group-22.png" alt="H2 Chile · Asociación Chilena de Hidrógeno" />
       </a>
