@@ -179,6 +179,9 @@
   .memberships-section { padding: 2.5rem 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
   .memb-label { font-size: 13px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
   .memb-item { font-size: 16px; font-weight: 400; color: var(--muted); padding: 0.45rem 1.1rem; border: 0.5px solid var(--border); border-radius: 1px; display: inline-block; margin: 4px 4px; }
+  .memb-logo-item { display: inline-flex; align-items: center; padding: 0.45rem 1.1rem; border: 0.5px solid var(--border); border-radius: 1px; margin: 4px 4px; text-decoration: none; transition: opacity 0.2s; }
+  .memb-logo-item:hover { opacity: 0.7; }
+  .memb-logo-item img { height: 36px; width: auto; display: block; }
 
   /* ── CLIENTS ── */
   .clients-section { padding: 6rem 0; }
@@ -518,8 +521,12 @@
   <div class="container">
     <p class="memb-label">Somos parte de</p>
     <div>
-      <span class="memb-item">CCI France-Chili · Cámara Franco Chilena para el Comercio y la Industria</span>
-      <span class="memb-item">H2 Chile · Asociación Chilena de Hidrógeno</span>
+      <a class="memb-logo-item" href="https://h2chile.cl" target="_blank" rel="noopener" aria-label="H2 Chile">
+        <img src="https://h2chile.cl/wp-content/uploads/2023/11/cropped-Group-22.png" alt="H2 Chile · Asociación Chilena de Hidrógeno" />
+      </a>
+      <a class="memb-logo-item" href="https://www.aic.cl/" target="_blank" rel="noopener" aria-label="AIC">
+        <img src="https://www.aic.cl/wp-content/uploads/2024/07/LOGOS-AIC-02.jpg" alt="AIC - Asociación de Empresas Consultoras de Ingeniería de Chile" />
+      </a>
     </div>
   </div>
 </div>
