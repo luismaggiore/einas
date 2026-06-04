@@ -3,7 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EINAS — Consultoría y Colaboración Ambiental</title>
+<script>document.documentElement.className += ' js';</script>
+<title>Consultora Ambiental en Punta Arenas | SEIA y RCA | EINAS</title>
+<meta name="description" content="EINAS es una consultora ambiental en Punta Arenas con presencia en todo Chile. Evaluación de impacto ambiental (SEIA), cumplimiento de RCA y soporte ambiental operativo para proyectos exigentes.">
+<meta name="author" content="EINAS — Consultoría y Colaboración Ambiental">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://einas.cl/">
+<meta name="theme-color" content="#196BBC">
+
+<!-- SEO local -->
+<meta name="geo.region" content="CL-MA">
+<meta name="geo.placename" content="Punta Arenas, Magallanes y Antártica Chilena">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EINAS">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="Consultora Ambiental en Punta Arenas | SEIA y RCA | EINAS">
+<meta property="og:description" content="Consultoría ambiental desde la Patagonia chilena: evaluación de impacto ambiental (SEIA), cumplimiento de RCA y soporte operativo. 200+ proyectos ejecutados.">
+<meta property="og:url" content="https://einas.cl/">
+<meta property="og:image" content="https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp">
+<meta property="og:image:alt" content="EINAS — Consultoría y Colaboración Ambiental">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consultora Ambiental en Punta Arenas | SEIA y RCA | EINAS">
+<meta name="twitter:description" content="Consultoría ambiental desde la Patagonia chilena: evaluación de impacto ambiental (SEIA), cumplimiento de RCA y soporte operativo.">
+<meta name="twitter:image" content="https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp">
+
+<!-- Favicon (isologo EINAS en SVG, autocontenido) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 77.86 146.62'%3E%3Crect width='77.86' height='146.62' fill='%23196BBC'/%3E%3Cpath fill='%23fff' d='M0,95.98h38.78c10.44,0,20.25-3.69,27.63-10.39,7.38-6.7,11.45-15.6,11.45-25.08v-9.89h-39.07c-10.36,0-20.1,3.66-27.43,10.31C4.04,67.59,0,76.43,0,85.83v10.15Z'/%3E%3Cpath fill='%23fff' d='M39.07,101.26H0v9.89c0,9.47,4.07,18.38,11.45,25.08,7.38,6.7,17.19,10.39,27.63,10.39h38.78v-10.15c0-9.4-4.04-18.24-11.36-24.89-7.33-6.65-17.07-10.31-27.43-10.31'/%3E%3Cpath fill='%23fff' d='M38.79,0c-10.36,0-20.1,3.66-27.43,10.31C4.04,16.96,0,25.8,0,35.2v30.63c1.97-3.15,4.4-6.03,7.25-8.62,4.1-3.72,8.86-6.64,14.17-8.67,5.46-2.1,11.26-3.16,17.23-3.18h.12c10.44,0,20.25-3.69,27.63-10.39,7.38-6.7,11.45-15.6,11.45-25.08V0h-39.07Z'/%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -219,9 +249,12 @@
   .footer-divider { border-color: rgba(255,255,255,0.08); margin: 2.5rem 0 1.5rem; }
   .footer-copy { font-size: 13px; font-weight: 300; letter-spacing: 0.08em; color: rgba(255,255,255,0.28); margin: 0; }
 
-  /* ── ANIMATIONS ── */
-  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.75s ease, transform 0.75s ease; }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  /* ── ANIMATIONS (progressive enhancement: solo se ocultan si hay JS) ── */
+  .js .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .js .fade-in.visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .js .fade-in { opacity: 1; transform: none; transition: none; }
+  }
 
   /* ── UTILITIES ── */
   .gap-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
@@ -232,15 +265,15 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container-fluid px-5">
-    <a class="navbar-brand" href="#">
-      <img src="https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp" alt="EINAS"/>
+    <a class="navbar-brand" href="#inicio">
+      <img src="https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp" alt="EINAS — Consultora Ambiental, Punta Arenas" width="120" height="38"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
         <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
@@ -252,7 +285,7 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero-wrap">
+<div class="hero-wrap" id="inicio">
   <div class="hero-frame">
     <div class="hero-bg-photo">
       <video autoplay muted loop playsinline src="https://ik.imagekit.io/lsmaggiore/Grass_wildflowers_mountains_breeze_202606021631.mp4"></video>
@@ -369,8 +402,8 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-5">
         <div class="about-visual">
-          <img class="about-img-main" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Patagonia"/>
-          <img class="about-img-accent" src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" alt="Trabajo de campo"/>
+          <img class="about-img-main" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Paisaje de la Patagonia chilena" width="800" height="600" loading="lazy"/>
+          <img class="about-img-accent" src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" alt="Trabajo de campo en terreno" width="600" height="400" loading="lazy"/>
           <div class="about-color-block">
             <span class="about-block-num">7+</span>
             <span class="about-block-text">Años en<br>gestión<br>ambiental</span>
@@ -507,7 +540,7 @@
         </div>
       </div>
       <div class="col-lg-7 map-wrap">
-        <img src="https://ik.imagekit.io/lsmaggiore/mapa-chile.webp" alt="Mapa de presencia EINAS en Chile" style="height: 420px; max-height: 420px; width: auto; object-fit: contain;"/>
+        <img src="https://ik.imagekit.io/lsmaggiore/mapa-chile.webp" alt="Mapa de presencia de EINAS en Chile: Valparaíso, Coquimbo, Ñuble, Los Lagos, Los Ríos y Magallanes" width="420" height="420" loading="lazy" style="height: 420px; max-height: 420px; width: auto; object-fit: contain;"/>
       </div>
     </div>
   </div>
@@ -519,10 +552,10 @@
     <p class="memb-label">Somos parte de</p>
     <div class="memb-logos">
       <a class="memb-logo-item" href="https://h2chile.cl" target="_blank" rel="noopener" aria-label="H2 Chile">
-        <img src="https://h2chile.cl/wp-content/uploads/2023/11/cropped-Group-22.png" alt="H2 Chile · Asociación Chilena de Hidrógeno" />
+        <img loading="lazy" width="120" height="52" src="https://h2chile.cl/wp-content/uploads/2023/11/cropped-Group-22.png" alt="H2 Chile · Asociación Chilena de Hidrógeno" />
       </a>
       <a class="memb-logo-item" href="https://www.aic.cl/" target="_blank" rel="noopener" aria-label="AIC">
-        <img src="https://www.aic.cl/wp-content/uploads/2024/05/LOGO-AIC-BLANCO-768x615-1-300x240.png" alt="AIC - Asociación de Empresas Consultoras de Ingeniería de Chile" style="filter: brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(600%) hue-rotate(190deg) brightness(90%);" />
+        <img loading="lazy" width="65" height="52" src="https://www.aic.cl/wp-content/uploads/2024/05/LOGO-AIC-BLANCO-768x615-1-300x240.png" alt="AIC - Asociación de Empresas Consultoras de Ingeniería de Chile" style="filter: brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(600%) hue-rotate(190deg) brightness(90%);" />
       </a>
     </div>
   </div>
@@ -536,37 +569,37 @@
   </div>
   <div class="clients-track mt-4">
     <div class="clients-strip">
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_icv-150x150-1.png" alt="ICV"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_hif-150x150-1.png" alt="HIF"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/tabsa-logo-150x150-1.jpg" alt="Tabsa"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_enel-150x150-1.png" alt="Enel"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/australis-food-logo-150x150-1.jpg" alt="Australis"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/enex-logo-150x150-1.jpg" alt="Enex"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/06/Electricite_de_France_logo.svg-1024x436.png" alt="EDF"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_cerveza-austral-150x150-1.png" alt="Cerveza Austral"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/llaquedona-logo-150x150-1.jpg" alt="Llaquedona"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_geopark-150x150-1.png" alt="Geopark"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_arcadis-150x150-2.png" alt="Arcadis"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_geobiota-150x150-2.png" alt="Geobiota"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_lago_grey-150x150-2.png" alt="Lago Grey"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_skysal-150x150-2.png" alt="Skysal"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/ddq-logo-150x150-2.jpg" alt="DDQ"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_icv-150x150-1.png" alt="ICV"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_hif-150x150-1.png" alt="HIF"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/tabsa-logo-150x150-1.jpg" alt="Tabsa"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_enel-150x150-1.png" alt="Enel"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/australis-food-logo-150x150-1.jpg" alt="Australis"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/enex-logo-150x150-1.jpg" alt="Enex"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/06/Electricite_de_France_logo.svg-1024x436.png" alt="EDF"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_cerveza-austral-150x150-1.png" alt="Cerveza Austral"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/llaquedona-logo-150x150-1.jpg" alt="Llaquedona"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_geopark-150x150-1.png" alt="Geopark"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_arcadis-150x150-2.png" alt="Arcadis"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_geobiota-150x150-2.png" alt="Geobiota"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_lago_grey-150x150-2.png" alt="Lago Grey"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_skysal-150x150-2.png" alt="Skysal"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/ddq-logo-150x150-2.jpg" alt="DDQ"/>
       <!-- duplicate for infinite loop -->
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_icv-150x150-1.png" alt="ICV"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_hif-150x150-1.png" alt="HIF"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/tabsa-logo-150x150-1.jpg" alt="Tabsa"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_enel-150x150-1.png" alt="Enel"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/australis-food-logo-150x150-1.jpg" alt="Australis"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/enex-logo-150x150-1.jpg" alt="Enex"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/06/Electricite_de_France_logo.svg-1024x436.png" alt="EDF"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_cerveza-austral-150x150-1.png" alt="Cerveza Austral"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/llaquedona-logo-150x150-1.jpg" alt="Llaquedona"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_geopark-150x150-1.png" alt="Geopark"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_arcadis-150x150-2.png" alt="Arcadis"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_geobiota-150x150-2.png" alt="Geobiota"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_lago_grey-150x150-2.png" alt="Lago Grey"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/logo_skysal-150x150-2.png" alt="Skysal"/>
-      <img class="client-img" src="https://einas.cl/wp-content/uploads/2025/05/ddq-logo-150x150-2.jpg" alt="DDQ"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_icv-150x150-1.png" alt="ICV"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_hif-150x150-1.png" alt="HIF"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/tabsa-logo-150x150-1.jpg" alt="Tabsa"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_enel-150x150-1.png" alt="Enel"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/australis-food-logo-150x150-1.jpg" alt="Australis"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/enex-logo-150x150-1.jpg" alt="Enex"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/06/Electricite_de_France_logo.svg-1024x436.png" alt="EDF"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_cerveza-austral-150x150-1.png" alt="Cerveza Austral"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/llaquedona-logo-150x150-1.jpg" alt="Llaquedona"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_geopark-150x150-1.png" alt="Geopark"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_arcadis-150x150-2.png" alt="Arcadis"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_geobiota-150x150-2.png" alt="Geobiota"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_lago_grey-150x150-2.png" alt="Lago Grey"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/logo_skysal-150x150-2.png" alt="Skysal"/>
+      <img class="client-img" loading="lazy" width="105" height="58" src="https://einas.cl/wp-content/uploads/2025/05/ddq-logo-150x150-2.jpg" alt="DDQ"/>
     </div>
   </div>
 </section>
@@ -599,7 +632,7 @@
     <div class="row g-5">
       <div class="col-12 col-md-6 col-lg-4">
         <div class="footer-logo">
-          <img src="https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp" alt="EINAS"/>
+          <img src="https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp" alt="EINAS — Consultora Ambiental" width="108" height="34" loading="lazy"/>
         </div>
         <p class="footer-desc">Consultoría y colaboración ambiental desde Punta Arenas, con presencia en todo Chile.</p>
         <p class="footer-contact-item">contacto@einas.cl</p>
@@ -639,6 +672,52 @@
     </div>
   </div>
 </footer>
+
+<!-- Datos estructurados: empresa y servicios -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://einas.cl/#organization",
+  "name": "EINAS — Consultoría y Colaboración Ambiental",
+  "alternateName": "EINAS",
+  "description": "Consultora ambiental en Punta Arenas con presencia en todo Chile. Evaluación de impacto ambiental (SEIA), cumplimiento de RCA y soporte ambiental operativo.",
+  "url": "https://einas.cl/",
+  "logo": "https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp",
+  "image": "https://einas.cl/wp-content/uploads/2024/04/Einas-1-2.webp",
+  "email": "contacto@einas.cl",
+  "telephone": "+56977090432",
+  "foundingDate": "2019",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Costanera del Estrecho 01860",
+    "addressLocality": "Punta Arenas",
+    "addressRegion": "Magallanes y Antártica Chilena",
+    "addressCountry": "CL"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Magallanes y Antártica Chilena" },
+    { "@type": "AdministrativeArea", "name": "Los Lagos" },
+    { "@type": "AdministrativeArea", "name": "Los Ríos" },
+    { "@type": "AdministrativeArea", "name": "Ñuble" },
+    { "@type": "AdministrativeArea", "name": "Coquimbo" },
+    { "@type": "AdministrativeArea", "name": "Valparaíso" },
+    { "@type": "Country", "name": "Chile" }
+  ],
+  "sameAs": [
+    "https://cl.linkedin.com/in/consultoría-ambiental-einas-b2a235186"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de gestión ambiental",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistema de Evaluación de Impacto Ambiental (SEIA)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exigencias en Resoluciones de Calificación Ambiental (RCA)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Soporte Ambiental Operativo" } }
+    ]
+  }
+}
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
