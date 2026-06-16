@@ -68,7 +68,7 @@
   /* ── HERO ── */
   .hero-wrap {
     padding: 1.5rem 1.5rem 0;
-    margin-top: 110px;
+    margin-top: 70px;
   }
   @media (max-width: 767px) {
     .hero-wrap { padding: 1rem 1rem 0; }
@@ -300,9 +300,10 @@
 <div class="hero-wrap" id="inicio">
   <div class="hero-frame">
     <div class="hero-bg-photo">
-      <img class="hero-carousel-img active" src="https://raw.githubusercontent.com/luismaggiore/einas/main/paisaje01.webp" alt="Paisaje 1">
-      <img class="hero-carousel-img" src="https://raw.githubusercontent.com/luismaggiore/einas/main/paisaje03.webp" alt="Paisaje 3">
+      <img class="hero-carousel-img active" src="https://raw.githubusercontent.com/luismaggiore/einas/main/paisaje03.webp" alt="Paisaje 3">
+      <img class="hero-carousel-img" src="https://raw.githubusercontent.com/luismaggiore/einas/main/llamas.webp" alt="Llamas">
       <img class="hero-carousel-img" src="https://raw.githubusercontent.com/luismaggiore/einas/main/paisaje04.webp" alt="Paisaje 4">
+      <img class="hero-carousel-img" src="https://raw.githubusercontent.com/luismaggiore/einas/main/equipo02.webp" alt="Equipo">
     </div>
     <div class="hero-frame-content">
       <div class="hero-isologo">
@@ -756,7 +757,7 @@
         imgs[current].classList.remove('active');
         current = (current + 1) % imgs.length;
         imgs[current].classList.add('active');
-      }, 2500);
+      }, 4000);
     })();
   </script>
 </body>
