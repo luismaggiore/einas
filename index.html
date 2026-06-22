@@ -195,6 +195,8 @@
   .team-section { background: var(--light); padding: 6rem 0; }
   .team-card { background: #fff; padding: 1.6rem 1.4rem; border: 0.5px solid var(--border); height: 100%; transition: background 0.2s; }
   .team-card:hover { background: #eef4fb; }
+  .team-card--empty { opacity: 0.35; pointer-events: none; }
+  .team-initials--empty { background: var(--border); }
   .team-initials { width: 96px; height: 96px; border-radius: 50%; background: rgba(25,107,188,0.1); color: var(--blue); font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-bottom: 0.9rem; }
   .team-name { font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
   .team-role { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.5; margin: 0; }
@@ -547,8 +549,69 @@
         </div>
       </div>
     </div>
+
+    <!-- Fila oculta -->
+    <div class="row g-1 mt-0" id="team-extra" style="display:none;">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card team-card--empty">
+          <div class="team-initials team-initials--empty"></div>
+          <p class="team-name">&nbsp;</p>
+          <p class="team-role">&nbsp;</p>
+          <p class="team-dept">&nbsp;</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card team-card--empty">
+          <div class="team-initials team-initials--empty"></div>
+          <p class="team-name">&nbsp;</p>
+          <p class="team-role">&nbsp;</p>
+          <p class="team-dept">&nbsp;</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card team-card--empty">
+          <div class="team-initials team-initials--empty"></div>
+          <p class="team-name">&nbsp;</p>
+          <p class="team-role">&nbsp;</p>
+          <p class="team-dept">&nbsp;</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card team-card--empty">
+          <div class="team-initials team-initials--empty"></div>
+          <p class="team-name">&nbsp;</p>
+          <p class="team-role">&nbsp;</p>
+          <p class="team-dept">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón conocer más -->
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <button id="btn-team-more" onclick="toggleTeamExtra()" style="background:none; border:1px solid var(--blue); color:var(--blue); font-family:var(--font); font-size:13px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; padding:0.7rem 2rem; border-radius:2px; cursor:pointer; transition:all 0.2s;">
+          Conocer más
+        </button>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<script>
+  function toggleTeamExtra() {
+    var extra = document.getElementById('team-extra');
+    var btn = document.getElementById('btn-team-more');
+    if (extra.style.display === 'none') {
+      extra.style.display = 'flex';
+      extra.style.flexWrap = 'wrap';
+      btn.textContent = 'Ver menos';
+    } else {
+      extra.style.display = 'none';
+      btn.textContent = 'Conocer más';
+    }
+  }
+</script>
 
 <!-- TERRITORY -->
 <section class="territory-section fade-in" id="territorio">
