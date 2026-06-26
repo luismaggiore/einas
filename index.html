@@ -551,17 +551,99 @@
       </div>
     </div>
 
+    <!-- Filas ocultas -->
+    <div id="team-extra" style="display:none;">
+      <div class="row g-1 mt-0">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card">
+          <div class="team-initials" style="padding:0;overflow:hidden;"><img src="https://raw.githubusercontent.com/luismaggiore/einas/main/08_paulina_ruiz.webp" alt="Paulina Javiera Ruiz Lobos" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+          <p class="team-name">Paulina Javiera Ruiz Lobos</p>
+          <p class="team-role">Ingeniera de Proyectos</p>
+          <p class="team-dept">Ingeniera de Proyectos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card">
+          <div class="team-initials" style="padding:0;overflow:hidden;"><img src="https://raw.githubusercontent.com/luismaggiore/einas/main/09_maria_constanza_fernandez.webp" alt="María Constanza Fernandez Stefani" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+          <p class="team-name">María Constanza Fernandez Stefani</p>
+          <p class="team-role">Ingeniera de Proyectos</p>
+          <p class="team-dept">Ingeniera de Proyectos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card">
+          <div class="team-initials" style="padding:0;overflow:hidden;"><img src="https://raw.githubusercontent.com/luismaggiore/einas/main/10_javier_legaza.webp" alt="Javier Legaza Carrasco" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+          <p class="team-name">Javier Legaza Carrasco</p>
+          <p class="team-role">Ingeniero de Proyectos</p>
+          <p class="team-dept">Ingeniero de Proyectos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card">
+          <div class="team-initials" style="padding:0;overflow:hidden;"><img src="https://raw.githubusercontent.com/luismaggiore/einas/main/06_rafael_rodriguez.webp" alt="Rafael Rodriguez Díaz" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+          <p class="team-name">Rafael Rodriguez Díaz</p>
+          <p class="team-role">Ing. Ambiental | Mg. Energías Renovables</p>
+          <p class="team-dept">Ingeniero de Proyectos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card">
+          <div class="team-initials" style="padding:0;overflow:hidden;"><img src="https://raw.githubusercontent.com/luismaggiore/einas/main/04_rocio_fuentes.webp" alt="Rocio Fuentes Riquelme" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+          <p class="team-name">Rocio Fuentes Riquelme</p>
+          <p class="team-role">Técnica en Medio Ambiente</p>
+          <p class="team-dept">Técnica de Proyectos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card">
+          <div class="team-initials" style="padding:0;overflow:hidden;"><img src="https://raw.githubusercontent.com/luismaggiore/einas/main/07_eduardo_caceres.webp" alt="Eduardo Cáceres Díaz" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+          <p class="team-name">Eduardo Cáceres Díaz</p>
+          <p class="team-role">Técnico Ambiental</p>
+          <p class="team-dept">Técnico de Proyectos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card">
+          <div class="team-initials" style="padding:0;overflow:hidden;"><img src="https://raw.githubusercontent.com/luismaggiore/einas/main/14_daniela castillo.webp" alt="Daniela Castillo Hernández" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+          <p class="team-name">Daniela Castillo Hernández</p>
+          <p class="team-role">Ingeniera de Proyectos</p>
+          <p class="team-dept">Ingeniera de Proyectos</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="team-card team-card--empty">
+          <div class="team-initials team-initials--empty"></div>
+          <p class="team-name">&nbsp;</p>
+          <p class="team-role">&nbsp;</p>
+          <p class="team-dept">&nbsp;</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
     <!-- Botón conocer más -->
     <div class="row mt-4">
       <div class="col-12 text-center">
-        <a href="equipo.html" style="display:inline-block; background:none; border:1px solid var(--blue); color:var(--blue); font-family:var(--font); font-size:13px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; padding:0.7rem 2rem; border-radius:2px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.background='var(--blue)';this.style.color='#fff'" onmouseout="this.style.background='none';this.style.color='var(--blue)'">
+        <button id="btn-team-more" onclick="handleTeamBtn()" style="background:none; border:1px solid var(--blue); color:var(--blue); font-family:var(--font); font-size:13px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; padding:0.7rem 2rem; border-radius:2px; cursor:pointer; transition:all 0.2s;">
           Conocer más
-        </a>
+        </button>
       </div>
     </div>
 
   </div>
 </section>
+
+<script>
+  var teamExpanded = false;
+  function handleTeamBtn() {
+    if (!teamExpanded) {
+      document.getElementById('team-extra').style.display = 'block';
+      teamExpanded = true;
+    } else {
+      window.location.href = 'equipo.html';
+    }
+  }
+</script>
 
 <!-- TERRITORY -->
 <section class="territory-section fade-in" id="territorio">
